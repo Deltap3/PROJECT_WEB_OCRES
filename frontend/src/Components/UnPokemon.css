@@ -1,0 +1,77 @@
+.page{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+position: relative;
+width: auto;
+height: auto;
+
+background: #FFFFFF;
+}
+
+.title{
+position: static;
+width: fit-content;
+height: auto;
+left: 0px;
+top: 0px;
+
+font-family: Open Sans;
+text-transform: capitalize;
+font-weight: bolder;
+font-size: 50px;
+line-height: 68px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #2F6CB4;
+}
+
+.pokeType{
+    display: flex;
+    flex-direction: row;
+    text-transform: capitalize;
+}
+
+.body{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+position: static;
+width:fit-content;
+height: auto;
+left: 0px;
+top: 68px;
+background: #CADAEC;
+padding: 2%;
+border-radius: 5%;
+}
+
+.image{
+    width: 200px;;
+    height: 200px;
+}
+
+.menu{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 126px 22px;
+
+position: static;
+width: 346px;
+height: 1069px;
+left: 0px;
+top: 0px;
+
+background: #3D3D3D;
+border-radius: 0px 10px 10px 0px;
+}
+
+
