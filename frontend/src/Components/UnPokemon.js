@@ -131,12 +131,11 @@ class UnPokemon extends Component {
                               <div className="div-23">
                                 <div className="builder-columns columns">
                                   <div className="builder-column column-6">
-                                    <div className="div-24">Talent : </div>
+                                    <div className="div-24">Talent: </div>
                                   </div>
 
                                   <div className="builder-column column-7">
-                                    <div className="div-25">
-                                      Engrais, Chlorophylle
+                                    <div className="div-25">Engrais, Chlorophylle
                                     </div>
                                   </div>
                                 </div>
@@ -145,11 +144,11 @@ class UnPokemon extends Component {
                               <div className="div-26">
                                 <div className="builder-columns columns">
                                   <div className="builder-column column-8">
-                                    <div className="div-27">Espèce : </div>
+                                    <div className="div-27">Espèce: </div>
                                   </div>
 
                                   <div className="builder-column column-9">
-                                    <div className="div-28">Pokémon Graine</div>
+                                    <div className="div-28">&nbsp;&nbsp;Pokémon Graine</div>
                                   </div>
                                 </div>
                               </div>
@@ -157,11 +156,11 @@ class UnPokemon extends Component {
                               <div className="div-29">
                                 <div className="builder-columns columns">
                                   <div className="builder-column column-10">
-                                    <div className="div-30">Taille : </div>
+                                    <div className="div-30">Taille: </div>
                                   </div>
 
                                   <div className="builder-column column-11">
-                                    <div className="div-31">2 mètres</div>
+                                    <div className="div-31">&nbsp; &nbsp; &nbsp;&nbsp;2 mètres</div>
                                   </div>
                                 </div>
                               </div>

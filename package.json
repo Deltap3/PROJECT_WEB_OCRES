@@ -1,0 +1,26 @@
+{
+  "name": "project_web_ocres",
+  "version": "1.0.0",
+  "description": "A lire impérativement avant de commencer quoi que ce soit, ce sont les règles que vous devrez appliquer tout au long du semestre:",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deltap3/PROJECT_WEB_OCRES.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deltap3/PROJECT_WEB_OCRES/issues"
+  },
+  "homepage": "https://github.com/Deltap3/PROJECT_WEB_OCRES#readme"
+}
+
