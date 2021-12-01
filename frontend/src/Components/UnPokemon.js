@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import './UnPokemon.css'
+import "./UnPokemon.css"
+import { Link } from "react-router-dom";
 
 class UnPokemon extends Component {
 
@@ -15,16 +16,6 @@ class UnPokemon extends Component {
         const response = await fetch(url)
         const data = await response.json()
         this.setState({ pokemon: data, loading: false })
-
-        /* const urlAbi1 = data.abilities[0].ability.url
-        const responseAbi1 = await fetch(urlAbi1)
-        const dataAbi1 = await responseAbi1.json()
-        this.setState({ ability1: dataAbi1 })
-
-        const urlAbi2 = data.abilities[1].ability.url
-        const responseAbi2 = await fetch(urlAbi2)
-        const dataAbi2 = await responseAbi2.json()
-        this.setState({ ability2: dataAbi2, loading: false }) */
     }
 
     switchColor(type) {
@@ -93,17 +84,17 @@ class UnPokemon extends Component {
         return (
             <div>
                 {this.state.loading ? (<div>loading...</div>) : (
-                    <div Class='pokemon'>
-                        <div Class='title'>
+                    <div className='pokemon'>
+                        <div className='title'>
                             {this.state.pokemon.name}
                         </div>
-                        <div Class='body'>
-                            <div Class="num">{this.state.pokemon.id}</div>
-                            <img Class='image' src={this.state.pokemon.sprites.front_default} />
-                            <div Class='pokeType'> Type :&nbsp;
+                        <Link to={`/${this.state.pokemon.name}`} className='body'>
+                            <div className="num">{this.state.pokemon.id}</div>
+                            <img className='image' src={this.state.pokemon.sprites.front_default} />
+                            <div className='pokeType'> Type :&nbsp;
                                 {this.state.pokemon.types.map((typePokemon, i) => {
                                     return (
-                                        <div Class="type" style={{
+                                        <div className="type" style={{
                                             color: "white",
                                             backgroundColor: this.switchColor(typePokemon.type.name)
                                         }}>
@@ -112,27 +103,10 @@ class UnPokemon extends Component {
                                     )
                                 })}
                             </div>
-                            {/* <div Class='pokeType'> Abilities :&nbsp;
-                                {this.state.pokemon.abilities.map((abilPokemon, i) => {
-                                    return (
-                                        <div>
-                                            <div>
-                                                [{abilPokemon.ability.name}]&nbsp;
-                                            </div>
-                                            <div>
-                                                {this.state.ability1.effect_changes};
-                                            </div>
-                                        </div>
-
-                                    )
-                                })}
-                            </div> */}
-                        </div>
+                        </Link>
                     </div>
-
                 )
                 }
-
             </div>
         )
     }

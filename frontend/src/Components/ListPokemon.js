@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import UnPokemon from './UnPokemon'
-
 class ListPokemon extends Component {
 
     state = {
@@ -13,12 +12,11 @@ class ListPokemon extends Component {
         const response = await fetch(url)
         const data = await response.json()
         this.setState({ listPoke: data, loading: false })
-        console.log(this.state.listPoke.results[0].name)
     }
 
     render() {
         return (
-            <div Class="pokeList">
+            <div className="pokeList">
                 {this.state.loading ? (<div>loading...</div>) : (
                     this.state.listPoke.results.map((pokemon, i) => {
                         return (
