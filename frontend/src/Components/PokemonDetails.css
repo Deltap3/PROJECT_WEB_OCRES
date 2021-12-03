@@ -83,5 +83,8 @@
         font-weight: 700;
         align-content: center;
       }
-    
-    
+
+      .chart{
+          max-height: 50px;
+          max-width: 50px;
+      }
