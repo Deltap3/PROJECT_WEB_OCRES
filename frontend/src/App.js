@@ -3,6 +3,11 @@ import './App.css';
 import Sidebar from './Components/Sidebar';
 import ListPokemon from './Components/ListPokemon';
 import PokemonDetails from './Components/PokemonDetails';
+
+
+import MyWidget from './Components/myWidget';
+
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -11,10 +16,12 @@ class App extends Component {
       <Router>
         <div className="container">
           <Sidebar />
+          <MyWidget />
           <Switch>
             <Route exact path="/">
               <ListPokemon />
             </Route>
+
             <Route path="/:pokemonName" component={PokemonDetails}>
               <PokemonDetails />
             </Route>
@@ -24,5 +31,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

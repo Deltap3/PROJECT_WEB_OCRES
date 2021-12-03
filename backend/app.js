@@ -34,7 +34,7 @@ mongoose.connect(
     () => console.log("Connected to the db"));
 
 //listen to the server
-app.listen(3000);
+app.listen(3001);
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -43,7 +43,3 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-
-
-
-module.exports = app;

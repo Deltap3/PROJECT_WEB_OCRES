@@ -9,7 +9,13 @@ class PokemonDetails extends Component {
     }
 
     async componentDidMount() {
-        const url = 'https://pokeapi.co/api/v2/pokemon/bulbasaur'
+
+
+        //get('/:postId', async (req, res)
+
+
+        const url = 'https://pokeapi.co/api/v2/pokemon/bulbasaur'        
+
         console.log(this.props.pokeName)
         const response = await fetch(url)
         const data = await response.json()
@@ -109,5 +115,4 @@ class PokemonDetails extends Component {
         )
     }
 }
-
 export default PokemonDetails

@@ -26,6 +26,12 @@ router.get('/:postId', async (req, res) => {
     }
 });
 
+router.get('/:prenom', (req, res, next) => {
+    Post.findOne({ _prenom: req.params.prenom })
+        .then(thing => res.status(200).json(thing))
+        .catch(error => res.status(404).json({ error }));
+});
+
 //si je veux supprimer le post que j'ai séléctionné avec la méthode du dessus 
 //pour ca je vais dans postmann, delete, je mets l'id du post que je veux delete apres le posts/ et je send  
 router.delete('/:postId', async (req, res) => {
@@ -67,8 +73,10 @@ router.patch('/:postId', async (req, res) => {
     } catch (err) {
         res.json({ message: err });
     }
+
 });
 
 
-module.exports = router;
 
+
+module.exports = router;
