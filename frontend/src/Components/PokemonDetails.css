@@ -1,12 +1,16 @@
 .pokemonU{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     
-    position: relative;
     max-width: 1200px;
     margin-left:auto;
     margin-right: auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background-color: rgba(22,22,22,0.5); /* complimenting your modal colors */
     }
     
     .titleU{
@@ -85,6 +89,6 @@
       }
 
       .chart{
-          max-height: 50px;
-          max-width: 50px;
+          height: 200px;
+          width: 200px;
       }

@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import "./UnPokemon.css"
 import { Link } from "react-router-dom";
+import "./UnPokemon.css"
 
 class UnPokemon extends Component {
 
     state = {
         loading: true,
-        pokemon: null,
-        ability1: null,
-        ability2: null,
+        pokemon: null
     }
 
     async componentDidMount() {

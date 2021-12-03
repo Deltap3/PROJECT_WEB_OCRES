@@ -1,66 +1,30 @@
 import React, { Component } from 'react'
 import "./PokemonDetails.css"
-import { Area, CirclePie, BarMetric } from 'react-simple-charts'
+import { PieChart } from 'react-minimal-pie-chart';
 
-
-class ApexChart extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-
-            series: [44, 55, 13, 43, 22],
-            options: {
-                chart: {
-                    width: 380,
-                    type: 'pie',
-                },
-                labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-                responsive: [{
-                    breakpoint: 480,
-                    options: {
-                        chart: {
-                            width: 200
-                        },
-                        legend: {
-                            position: 'bottom'
-                        }
-                    }
-                }]
-            },
-
-
-        };
-    }
-
-
-
-    render() {
-        return (
-
-
-            <div id="chart">
-                <ReactApexChart options={this.state.options} series={this.state.series} type="pie" width={380} />
-            </div>
-
-
-        );
-    }
+const state = {
+    labels: ['January', 'February', 'March',
+        'April', 'May'],
+    datasets: [
+        {
+            label: 'Rainfall',
+            backgroundColor: 'rgba(75,192,192,1)',
+            borderColor: 'rgba(0,0,0,1)',
+            borderWidth: 2,
+            data: [65, 59, 80, 81, 56]
+        }
+    ]
 }
-
-const domContainer = document.querySelector('#app');
-ReactDOM.render(React.createElement(ApexChart), domContainer);
 
 class PokemonDetails extends Component {
 
     state = {
         loading: true,
-        pokemon: null
+        pokemon: null,
     }
 
     async componentDidMount() {
         const url = 'https://pokeapi.co/api/v2/pokemon/bulbasaur'
-        console.log(this.props.pokeName)
         const response = await fetch(url)
         const data = await response.json()
         this.setState({ pokemon: data, loading: false })
@@ -151,8 +115,15 @@ class PokemonDetails extends Component {
                                     )
                                 })}
                             </div>
-                            <ApexChart />
                         </div>
+                        <PieChart className="chart"
+                            data={[
+                                { title: 'Sinoh', value: 10, color: '#E38627' },
+                                { title: 'Johto', value: 15, color: '#C13C37' },
+                                { title: 'Ohen', value: 20, color: '#6A2135' },
+                            ]} label={({ dataEntry }) => dataEntry.value}
+
+                        />
                     </div>
                 )
                 }

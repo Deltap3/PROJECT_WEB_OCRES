@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import UnPokemon from './UnPokemon'
+
 class ListPokemon extends Component {
 
     state = {
         listPoke: null,
-        loading: true
+        loading: true,
     }
 
     async componentDidMount() {
@@ -22,7 +23,8 @@ class ListPokemon extends Component {
                         return (
                             <UnPokemon pokeName={pokemon.name} />
                         )
-                    }))}
+                    })
+                )}
             </div>
         )
     }
