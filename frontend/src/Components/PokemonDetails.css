@@ -1,12 +1,16 @@
 .pokemonU{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     
-    position: relative;
     max-width: 1200px;
     margin-left:auto;
     margin-right: auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
     }
     
     .titleU{
@@ -19,7 +23,7 @@
     font-family: Open Sans;
     text-transform: capitalize;
     font-weight: bolder;
-    font-size: 100px;
+    font-size: 50px;
     line-height: 68px;
     display: flex;
     align-items: center;
@@ -44,19 +48,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     
     
     position: static;
     
     top: 68px;
-    background: #CADAEC;
     padding: auto;
-    border-radius: 5%;
     }
     
     .imageU{
-        width: 500px;;
-        height: 500px;
+        width: 300px;;
+        height: 300px;
     }
     
     .pokeListU{
@@ -83,5 +86,213 @@
         font-weight: 700;
         align-content: center;
       }
+
+      .chart{
+          height: 200px;
+          width: 200px;
+          margin: 10%;
+          overflow: visible;
+          text-align: center;
+          text-transform: capitalize;
+          align-self: center;
+      }
+
+      .allU{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          background: #CADAEC;
+          border-radius: 5%;
+          justify-content: center;
+      }
+      .titleAbi{
+        position: static;
+        width: fit-content;
+        height: auto;
+        left: 0px;
+        top: 0px;
+        
+        font-family: Open Sans;
+        text-transform: capitalize;
+        font-weight: bolder;
+        font-size: 30px;
+        line-height: 68px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #2F6CB4;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    .abilities{
+        margin: 2%;
+    }
     
-    
+    .pokemon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        position: relative;
+        width: 300px;
+        height: 400px;
+        max-width: 300px;
+        max-height: 400px;
+        margin-left:5%;
+        margin-right: 5%;
+        
+        background: #FFFFFF;
+        }
+
+        .pokemonE{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px;
+            height: 200px;
+            margin-bottom: 20%;
+            padding: auto;
+            }
+        
+        .title{
+        position: static;
+        width: fit-content;
+        height: auto;
+        left: 0px;
+        top: 0px;
+        
+        font-family: Open Sans;
+        text-transform: capitalize;
+        font-weight: bolder;
+        font-size: 50px;
+        line-height: 68px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #2F6CB4;
+        margin-left:auto;
+        margin-right: auto;
+        }
+
+        .title2{
+            position: static;
+            width: fit-content;
+            height: auto;
+            
+            font-family: Open Sans;
+            text-transform: capitalize;
+            font-weight: bolder;
+            font-size: 50px;
+            line-height: 68px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            
+            color: #2F6CB4;
+            margin: auto;
+            margin-top: 7%;
+            }
+
+        .titleE{
+            position: static;
+            width: fit-content;
+            height: auto;
+            top: 0px;
+            
+            font-family: Open Sans;
+            text-transform: capitalize;
+            font-weight: bolder;
+            font-size: 20px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            
+            color: #2F6CB4;
+            margin-left:auto;
+            margin-right: auto;
+            }
+
+            .evotitle{
+                width: fit-content;
+                height: auto;
+                margin-top: 5%;
+                
+                font-family: Open Sans;
+                text-transform: capitalize;
+                font-weight: bolder;
+                font-size: 20px;
+                line-height: 30px;
+                align-items: center;
+                text-align: center;
+                
+                color: #1D4572;
+                margin-left:auto;
+                margin-right: auto;
+                }
+        
+        .pokeType{
+            display: flex;
+            flex-direction: row;
+            text-transform: capitalize;
+            justify-content: center;
+            width:inherit;
+            flex-wrap: wrap;
+        }
+        
+        .body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+        position: static;
+        width: 250px;
+        height: 350px;
+        
+        top: 68px;
+        background: #CADAEC;
+        padding: 2%;
+        border-radius: 5%;
+        cursor: pointer;
+        }
+        
+        .image{
+            width: 200px;;
+            height: 200px;
+        }
+        
+        .pokeList{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        .type{
+            padding: 1%;
+            text-align: center;
+            align-self: center;
+            vertical-align: middle;
+            border-radius: 15%;
+        }
+        .num {
+            height: 30px;
+            width: 30px;
+            border: solid;
+            border-color: #2F6CB4;
+            border-radius: 50%;
+            text-align: center;
+            color: #2F6CB4;
+            font-weight: 700;
+            align-content: center;
+          }
+        .itemImg{
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15%;
+        }
+        
