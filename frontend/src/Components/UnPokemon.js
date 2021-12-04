@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-import "./UnPokemon.css"
+import "./PokemonDetails.css"
 
 class UnPokemon extends Component {
 

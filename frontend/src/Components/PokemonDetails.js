@@ -1,20 +1,9 @@
 import React, { Component } from 'react'
 import "./PokemonDetails.css"
 import { PieChart } from 'react-minimal-pie-chart';
-
-const state = {
-    labels: ['January', 'February', 'March',
-        'April', 'May'],
-    datasets: [
-        {
-            label: 'Rainfall',
-            backgroundColor: 'rgba(75,192,192,1)',
-            borderColor: 'rgba(0,0,0,1)',
-            borderWidth: 2,
-            data: [65, 59, 80, 81, 56]
-        }
-    ]
-}
+import Ability from './Ability'
+import Species from './Species';
+import Items from './Items';
 
 class PokemonDetails extends Component {
 
@@ -24,7 +13,7 @@ class PokemonDetails extends Component {
     }
 
     async componentDidMount() {
-        const url = 'https://pokeapi.co/api/v2/pokemon/bulbasaur'
+        const url = 'https://pokeapi.co/api/v2/pokemon/pikachu'
         const response = await fetch(url)
         const data = await response.json()
         this.setState({ pokemon: data, loading: false })
@@ -92,38 +81,77 @@ class PokemonDetails extends Component {
         }
     }
 
+    async printAbility(url) {
+        const response = await fetch(url)
+        const data = await response.json()
+        this.setState({ pokemon: data, loading: false })
+    }
+
     render() {
         return (
             <div>
                 {this.state.loading ? (<div>loading...</div>) : (
                     <div className='pokemonU'>
-                        <div className='bodyU'>
-                            <div className='titleU'>
-                                {this.state.pokemon.name}
+                        <div className='allU'>
+                            <div className='bodyU'>
+                                <div className='titleU'>
+                                    {this.state.pokemon.name}
+                                </div>
+                                <div className='numU'>{this.state.pokemon.id}</div>
+                                <img className='imageU' src={this.state.pokemon.sprites.front_default} />
+                                <div className='pokeTypeU'> Type :&nbsp;
+                                    {this.state.pokemon.types.map((typePokemon, i) => {
+                                        return (
+                                            <div className='typeU' style={{
+                                                color: "white",
+                                                backgroundColor: this.switchColor(typePokemon.type.name)
+                                            }}>
+                                                {typePokemon.type.name}&nbsp;
+                                            </div>
+                                        )
+                                    })}
+                                </div>
                             </div>
-                            <div className='numU'>{this.state.pokemon.id}</div>
-                            <img className='imageU' src={this.state.pokemon.sprites.front_default} />
-                            <div className='pokeTypeU'> Type :&nbsp;
-                                {this.state.pokemon.types.map((typePokemon, i) => {
-                                    return (
-                                        <div className='typeU' style={{
-                                            color: "white",
-                                            backgroundColor: this.switchColor(typePokemon.type.name)
-                                        }}>
-                                            {typePokemon.type.name}&nbsp;
-                                        </div>
-                                    )
-                                })}
+                            <PieChart className="chart"
+                                data={[
+                                    { title: this.state.pokemon.stats[0].stat.name, value: this.state.pokemon.stats[0].base_stat, color: '#70e000' },
+                                    { title: this.state.pokemon.stats[1].stat.name, value: this.state.pokemon.stats[1].base_stat, color: '#ba0c0c' },
+                                    { title: this.state.pokemon.stats[2].stat.name, value: this.state.pokemon.stats[2].base_stat, color: '#7a7a7a' },
+                                    { title: this.state.pokemon.stats[3].stat.name, value: this.state.pokemon.stats[3].base_stat, color: '#4cc9f0' },
+                                    { title: this.state.pokemon.stats[4].stat.name, value: this.state.pokemon.stats[4].base_stat, color: '#9d4edd' },
+                                    { title: this.state.pokemon.stats[5].stat.name, value: this.state.pokemon.stats[5].base_stat, color: '#ff9f1c' },
+                                ]} label={({ dataEntry }) => dataEntry.title + ': ' + dataEntry.value}
+                                labelStyle={{ fontSize: '10px' }}
+                                labelPosition={100}
+                            />
+                            <div className="species">
+                                <Species url={this.state.pokemon.species.url} />
+                            </div>
+                            <div className='bodyU'>
+                                <div className='title2'>Abilities</div>
+                                <div className="abilities">{this.state.pokemon.abilities[0] ?
+                                    <div >
+                                        <Ability url={this.state.pokemon.abilities[0].ability.url} />
+                                    </div> : null}
+                                    {this.state.pokemon.abilities[1] ?
+                                        <div >
+                                            <Ability url={this.state.pokemon.abilities[1].ability.url} />
+                                        </div> : null}
+                                    <div className='title2'>Held Items</div>
+                                </div>{this.state.pokemon.held_items[0] ?
+                                    <div className="items">
+                                        <Items url={this.state.pokemon.held_items[0].item.url} />
+                                    </div> : null
+                                }
+                                {this.state.pokemon.held_items[1] ?
+                                    <div className="items">
+                                        <Items url={this.state.pokemon.held_items[1].item.url} />
+                                    </div> : null
+                                }
                             </div>
                         </div>
-                        <PieChart className="chart"
-                            data={[
-                                { title: 'Sinoh', value: 10, color: '#E38627' },
-                                { title: 'Johto', value: 15, color: '#C13C37' },
-                                { title: 'Ohen', value: 20, color: '#6A2135' },
-                            ]} label={({ dataEntry }) => dataEntry.value}
 
-                        />
+
                     </div>
                 )
                 }
