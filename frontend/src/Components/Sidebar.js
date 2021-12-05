@@ -7,12 +7,17 @@ export class Sidebar extends Component {
             <ul className="sidebarList">
                 <Link to="/" className="link">
                     <li className="sidebarListItem">
-                        Home
+                        List Pokemon
                     </li>
                 </Link>
                 <Link to="/home2" className="link">
                     <li className="sidebarListItem">
-                        Home 2
+                        One Pokemon
+                    </li>
+                </Link>
+                <Link to="/myTeam" className="link">
+                    <li className="sidebarListItem">
+                        My Team
                     </li>
                 </Link>
             </ul>

@@ -25,9 +25,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\CAP\Documents\Techno web\PROJECT_WEB_OCRES\PROJECT_WEB_OCRES\frontend\node_modules\@storybook\core\dist\server\common\polyfills.js */"./node_modules/@storybook/core/dist/server/common/polyfills.js");
-__webpack_require__(/*! C:\Users\CAP\Documents\Techno web\PROJECT_WEB_OCRES\PROJECT_WEB_OCRES\frontend\.storybook\addons.js */"./.storybook/addons.js");
-module.exports = __webpack_require__(/*! C:\Users\CAP\Documents\Techno web\PROJECT_WEB_OCRES\PROJECT_WEB_OCRES\frontend\node_modules\@storybook\core\dist\client\manager\index.js */"./node_modules/@storybook/core/dist/client/manager/index.js");
+__webpack_require__(/*! C:\Users\maist\Documents\4_Fichiers ING4\Web\PROJECT_WEB_OCRES\PROJECT_WEB_OCRES\frontend\node_modules\@storybook\core\dist\server\common\polyfills.js */"./node_modules/@storybook/core/dist/server/common/polyfills.js");
+__webpack_require__(/*! C:\Users\maist\Documents\4_Fichiers ING4\Web\PROJECT_WEB_OCRES\PROJECT_WEB_OCRES\frontend\.storybook\addons.js */"./.storybook/addons.js");
+module.exports = __webpack_require__(/*! C:\Users\maist\Documents\4_Fichiers ING4\Web\PROJECT_WEB_OCRES\PROJECT_WEB_OCRES\frontend\node_modules\@storybook\core\dist\client\manager\index.js */"./node_modules/@storybook/core/dist/client/manager/index.js");
 
 
 /***/ }),
