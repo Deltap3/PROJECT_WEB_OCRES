@@ -295,4 +295,20 @@
             height: 50px;
             margin-bottom: 15%;
         }
-        
+        .sidebarList{
+            list-style: none;
+            background: #3D3D3D;
+            margin-top: 0px;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+        .sidebarListItem{
+            margin-top: 5%;
+            color: #FFFFFF;
+            margin: auto;
+            width: max-content;
+            margin-top: 50%;
+        }
+        .link{
+            text-decoration: none;
+        }
